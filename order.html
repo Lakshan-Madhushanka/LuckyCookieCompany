@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Lucky Cookie Company</title>
+    <meta name="description" content="Order cookies from Lucky Cookie Company">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="logo.png" alt="Lucky Cookie Company Logo" class="logo">
+        <h1 id="main-title">Lucky Cookie Company</h1>
+
+        <nav class="navigation-bar">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="recipe.html">Recipe</a></li>
+                <li class="nav-item"><a href="order.html" class="current-page">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Order Now</h2>
+
+            <table class="price-table">
+                <tr>
+                    <th>Cookie Type</th>
+                    <th>Price (LKR)</th>
+                </tr>
+                <tr>
+                    <td>Chocolate Chip Cookies</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Protein Cookies</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Butter Cookies</td>
+                    <td>250</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Choose Your Favorite Cookies</h2>
+
+            <div class="cookie-card-container">
+                <div class="cookie-card">
+                    <h3>Chocolate Chip</h3>
+                    <p>Fresh cookies filled with chocolate chips.</p>
+                    <p class="price">LKR 200</p>
+                </div>
+
+                <div class="cookie-card">
+                    <h3>Protein Cookie</h3>
+                    <p>A healthier cookie with extra protein.</p>
+                    <p class="price">LKR 300</p>
+                </div>
+
+                <div class="cookie-card">
+                    <h3>Butter Cookie</h3>
+                    <p>Soft and buttery cookies with classic flavor.</p>
+                    <p class="price">LKR 250</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Place Your Order</h2>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="order-form">
+                <label for="customerName">Customer Name</label>
+                <input type="text" id="customerName" name="customerName" required>
+
+                <label for="customerEmail">Email Address</label>
+                <input type="email" id="customerEmail" name="customerEmail" required>
+
+                <label for="cookieType">Cookie Type</label>
+                <select id="cookieType" name="cookieType" required>
+                    <option value="">Select a cookie type</option>
+                    <option value="Chocolate Chip Cookies">Chocolate Chip Cookies</option>
+                    <option value="Protein Cookies">Protein Cookies</option>
+                    <option value="Butter Cookies">Butter Cookies</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="deliveryDate">Delivery Date</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+                <label for="specialMessage">Special Message</label>
+                <textarea id="specialMessage" name="specialMessage" placeholder="Add any special request here"></textarea>
+
+                <button type="submit">Send Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Lucky Cookie Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
